@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*============================================================================*/
+
+
+body {
+  background-color: #ffffff;
+  font-family: 'PT Sans', sans-serif;
+  --hover-duration:0.5s;
+  --dark-blue: #1F497B;
+  --blue: #265C9A;
+  --red: #FF3D3D;
+  --dark-red: #CE2929;
+  --yellow: #FBFF3D;
+  --container:90vw;
+}
+
+
+
+.body__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+[class *="__container"] {
+  max-width: var(--container);
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* @media (max-width: 1200px) {
+  [class *="__container"] {
+    max-width: 1000px;
+  
+  }
+} */
+
+
+@media (max-width: 1023.98px) {
+  [class *="__container"] {
+    max-width: none;
+    padding: 0 20px;
+  }
+}
+
+/*============================================================================*/
+.filters {
+  display: flex;
+  gap: 15px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 1023.98px) {
+  .filters {
+    display: none;
+  }
+}
+
+.filters__types {
+  flex: 0 0 25%;
+  padding: 14px 17px;
+  border: 1px solid #D0D0D0;
+}
+.filters__brands {
+  flex: 0 0 25%;
+  padding: 14px 17px;
+  border: 1px solid #D0D0D0;
+}
+.filters__prices {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.filters__prices span {
+
+  text-transform: uppercase;
+}
+
+.filters__prices-input{
+  padding: 14px 17px;
+  border: 1px solid #D0D0D0;
+}
+
+
+
+.filters__prices-input input::placeholder{
+  
+  font-weight: 700;
+  text-align: right;
+
+}
+
+/*============================================================================*/
+
+.gallery__container{
+  display: grid;
+  grid-template: 1fr / repeat(4,25%);
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1023.98px) {
+  .gallery__container{
+    
+    grid-template: 1fr / repeat(3,33%);
+    
+  }
+}
+
+@media (max-width: 767.98px) {
+  .gallery__container{
+    
+    grid-template: 1fr / repeat(2,50%);
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery__container{
+    
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+
+
+
+.gallery__item {
+  
+  border: 1px solid #DEDEDE;
+  
+  
+}
+.gallery__item_wide {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 3;
+}
+
+.gallery__card{
+  padding: 20px;
+  
+}
+
+.gallery__item_wide .gallery__card{
+  
+  display: flex;
+}
+
+.item-gallery__image {
+}
+.item-gallery__image img{
+  max-width: 100%;
+}
+
+.gallery__item_wide .item-gallery__image img{
+  max-width: none;
+}
+
+.item-gallery__desc {
+}
+.item-gallery__title {
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  margin-bottom: 5px;
+}
+.item-gallery__text {
+  font-size: 1rem;
+  color: #989898;
+  line-height: 1.25rem;
+  margin-bottom: 20px;
+}
+.item-gallery__discount {
+  color: #989898;
+  line-height: 1.25rem;
+text-decoration-line: line-through;
+
+margin-bottom: 5px;
+
+}
+
+.gallery__item_wide .item-gallery__buy {
+  color: var(--red);
+}
+.gallery__item_wide .item-gallery__basket svg{
+  fill:var(--red)
+}
+
+.item-gallery__buy {
+  border-top: 1px solid;
+  padding-top: 5px;
+  color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-gallery__price {
+
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+
+}
+.item-gallery__basket {
+  cursor: pointer;
+}
+.item-gallery__basket svg{
+  fill:var(--blue)
+}
+
+
+
+/*============================================================================*/
+
+
+/*============================================================================*/
