@@ -51,6 +51,7 @@ color: var(--yellow);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 @media (max-width: 1023.98px) {
@@ -105,12 +106,18 @@ color: var(--yellow);
 }
 
 .header__search {
-    width: 22vw;
+    width: 16vw;
     border-bottom: 1px solid #517DAE;
     display: flex;
     align-items: center;
     gap: 7px;
     padding-bottom: 5px;
+}
+
+@media (max-width: 1600px) {
+    .header__search {
+        width: 22vw;
+    }
 }
 
 @media (max-width: 1023.98px) {
@@ -131,6 +138,7 @@ color: var(--yellow);
 .header__input{
     color: #ffffff;
     background-color: var(--blue);
+    width: 100%;
 }
 
 .header__input::placeholder{
