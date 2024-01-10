@@ -72,12 +72,18 @@ color: var(--yellow);
         justify-content: space-around;
         width: 24px;
         height: 24px;
+        cursor: pointer;
     }   
 
     .header__button span{
         width: 100%;
         height: 2px;
         background-color: #ffffff;
+        transition-duration: var(--hover-duration);
+    }
+
+    .header__button:hover span{
+        background-color: var(--yellow);
     }
 }
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Funiro</title>
+	<title>Devices</title>
 	<link rel="shortcut icon" href="dist/img/favicon.ico">
 
 	<link rel="stylesheet" href="dist/css/style.css" />
@@ -23,7 +23,7 @@
 				<div class="header__rigth-side">
 
 					<div class="header__logo">
-						<div class="header__button"><span></span><span></span><span></span></div><a href="#">Логотип</a>
+						<div id="header-button" class="header__button"><span></span><span></span><span></span></div><a href="#">Логотип</a>
 					</div>
 					<div class="header__phone"> <a href="#">8 800 777 50 50</a> </div>
 					<div class="header__search">
@@ -72,36 +72,67 @@
 	</header>
 	<main class="main">
 		<section class="filters filters__container">
-			<div class="filters__types">
-				<select>
-					<option value="Любого типа">Любого типа</option>
-					<option value="Зеркальные">Зеркальные</option>
-					<option value="Беззеркальные">Беззеркальные</option>
-					<option value="Компактные">Компактные</option>
-				</select>
-			</div>
-			<div class="filters__brands">
-				<select>
-					<option value="Canon">Canon</option>
-					<option value="Nikon">Nikon</option>
-					<option value="Fuji">Fuji</option>
-
-				</select>
-			</div>
-			<div class="filters__prices">
-				<span>По цене</span>
-				<div class="filters__prices-input">
-					<label for="from">от</label>
-					<input id="from" type="text" placeholder="500">
+			<div class="filters__row">
+				<div class="filters__title">Фототехника</div>
+				<div id="filters-open" class="filters__button">
+					<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_0_293)">
+						<path d="M21.0833 17.4167H18.6423C18.2453 16.0958 17.0317 15.125 15.5833 15.125C14.135 15.125 12.9222 16.0958 12.5244 17.4167H0.916652C0.410652 17.4167 0 17.8273 0 18.3333C0 18.8393 0.410652 19.25 0.916652 19.25H12.5244C12.9213 20.5709 14.135 21.5417 15.5833 21.5417C17.0316 21.5417 18.2444 20.5709 18.6422 19.25H21.0833C21.5902 19.25 22 18.8393 22 18.3333C22 17.8273 21.5903 17.4167 21.0833 17.4167ZM15.5833 19.7083C14.8252 19.7083 14.2083 19.0914 14.2083 18.3333C14.2083 17.5753 14.8252 16.9583 15.5833 16.9583C16.3414 16.9583 16.9583 17.5753 16.9583 18.3333C16.9583 19.0914 16.3414 19.7083 15.5833 19.7083Z" fill="#757575"/>
+						<path d="M21.0833 2.7499H18.6423C18.2444 1.429 17.0317 0.458252 15.5833 0.458252C14.135 0.458252 12.9222 1.429 12.5244 2.7499H0.916652C0.410652 2.7499 0 3.16056 0 3.66656C0 4.17256 0.410652 4.58321 0.916652 4.58321H12.5244C12.9222 5.90416 14.135 6.87491 15.5833 6.87491C17.0317 6.87491 18.2444 5.90416 18.6423 4.58325H21.0833C21.5903 4.58325 22 4.1726 22 3.6666C22 3.1606 21.5903 2.7499 21.0833 2.7499ZM15.5833 5.04156C14.8252 5.04156 14.2083 4.42465 14.2083 3.66656C14.2083 2.90846 14.8252 2.29156 15.5833 2.29156C16.3414 2.29156 16.9583 2.90846 16.9583 3.66656C16.9583 4.42465 16.3414 5.04156 15.5833 5.04156Z" fill="#757575"/>
+						<path d="M21.0833 10.0834H9.4756C9.07775 8.7625 7.865 7.79175 6.4167 7.79175C4.96839 7.79175 3.7556 8.7625 3.35779 10.0834H0.916652C0.410652 10.0834 0 10.4941 0 11.0001C0 11.5061 0.410652 11.9167 0.916652 11.9167H3.35775C3.7556 13.2376 4.96835 14.2084 6.41665 14.2084C7.86496 14.2084 9.07775 13.2376 9.47555 11.9167H21.0833C21.5902 11.9167 22 11.5061 22 11.0001C22 10.4941 21.5903 10.0834 21.0833 10.0834ZM6.41665 12.3751C5.65855 12.3751 5.04165 11.7582 5.04165 11.0001C5.04165 10.242 5.65855 9.62505 6.41665 9.62505C7.17475 9.62505 7.79165 10.242 7.79165 11.0001C7.79165 11.7582 7.17475 12.3751 6.41665 12.3751Z" fill="#757575"/>
+						</g>
+						<defs>
+						<clipPath id="clip0_0_293">
+						<rect width="22" height="22" fill="white"/>
+						</clipPath>
+						</defs>
+						</svg>
+						
 				</div>
-				<div class="filters__prices-input">
-					<label for="to">от</label>
-					<input id="to" type="text" placeholder="10000">
-				</div>
-
-
-				<span>рублей</span>
 			</div>
+			<div class="filters__filters hidden">
+				<div class="filters__body">
+				<div id="filters-close" class="filters__close">
+					<svg width="19" height="19" viewBox="0 0 19 19" fill="white" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.9143 9.49999L18.7071 1.7071C19.0977 1.31656 19.0977 0.683406 18.7071 0.292904C18.3166 -0.0976347 17.6834 -0.0976347 17.2929 0.292904L9.49999 8.08579L1.7071 0.292904C1.31656 -0.0976347 0.683406 -0.0976347 0.292904 0.292904C-0.0975975 0.683443 -0.0976347 1.3166 0.292904 1.7071L8.08579 9.49999L0.292904 17.2929C-0.0976347 17.6834 -0.0976347 18.3166 0.292904 18.7071C0.683443 19.0976 1.3166 19.0976 1.7071 18.7071L9.49999 10.9142L17.2928 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3165 19.0976 17.6834 18.7071 17.2929L10.9143 9.49999Z" />
+					</svg>
+					</div>
+				<div class="filters__types">
+					<select>
+						<option value="Любого типа">Любого типа</option>
+						<option value="Зеркальные">Зеркальные</option>
+						<option value="Беззеркальные">Беззеркальные</option>
+						<option value="Компактные">Компактные</option>
+					</select>
+				</div>
+				<div class="filters__brands">
+					<select>
+						<option value="Canon">Canon</option>
+						<option value="Nikon">Nikon</option>
+						<option value="Fuji">Fuji</option>
+
+					</select>
+				</div>
+				<div class="filters__prices">
+					<span>По цене</span>
+					<div class="filters__prices-input">
+						<label for="from">от</label>
+						<input id="from" type="text" placeholder="500">
+					</div>
+					<div class="filters__prices-input">
+						<label for="to">от</label>
+						<input id="to" type="text" placeholder="10000">
+					</div>
+
+
+					<span>рублей</span>
+				</div>
+				<div id="filters-apply" class="filters__apply">Применить</div>
+
+			</div>
+			</div>
+			
+
 
 		</section>
 		<section class="gallery"></section>
