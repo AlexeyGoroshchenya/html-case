@@ -419,7 +419,7 @@ height: 156px;
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1px;
   background-color: #110A1D;
   z-index: 2;
 
