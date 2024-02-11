@@ -414,7 +414,7 @@ height: 156px;
 }
 
 .banner__row::after {
-  width: 100%;
+  width: 101%;
   height: 100%;
   content: '';
   position: absolute;
